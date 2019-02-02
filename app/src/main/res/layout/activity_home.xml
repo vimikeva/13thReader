@@ -1,0 +1,219 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Home"
+    android:orientation="vertical" >
+
+    <!-- HEADER -->
+    <LinearLayout
+        android:id="@+id/home_header"
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:orientation="horizontal"
+        android:gravity="center_vertical">
+
+        <EditText
+            android:id="@+id/home_search"
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:layout_marginStart="@dimen/small_dp"
+            android:layout_marginEnd="@dimen/small_dp"
+            android:paddingStart="@dimen/medium_dp"
+            android:paddingEnd="@dimen/medium_dp"
+            android:background="@drawable/rounded_edit_text"
+            android:textSize="18sp"
+            android:layout_weight="2"
+            android:inputType="text"
+            android:hint="@string/search_text"
+            tools:ignore="Autofill" />
+
+        <TextView
+            android:id="@+id/home_notification"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/notification_text"
+            android:textSize="24sp"
+            android:textColor="@color/colorPrimaryDark"
+            android:paddingStart="@dimen/small_dp"
+            android:paddingEnd="@dimen/medium_dp"
+            android:clickable="true"
+            android:focusable="true"
+            android:onClick="onClickNotification" />
+
+    </LinearLayout>
+    
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_below="@id/home_header"
+        android:background="@color/colorPrimaryDark"/>
+
+
+    <!-- Content Block -->
+    <LinearLayout
+        android:id="@+id/home_content"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:gravity="center"
+        android:layout_centerInParent="true">
+
+        <TextView
+            android:id="@+id/home_content_1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/home_context_1"
+            android:textAllCaps="false"
+            android:textColor="@color/colorBlack"
+            android:textSize="18sp" />
+        <TextView
+            android:id="@+id/home_content_2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAlignment="center"
+            android:layout_marginStart="48dp"
+            android:layout_marginEnd="48dp"
+            android:text="@string/home_context_2"
+            android:textSize="16sp"
+            android:textColor="@color/colorBlack"/>
+    </LinearLayout>
+    
+
+    <!-- FOOTER -->
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_above="@id/home_footer"
+        android:background="@color/colorPrimaryDark"/>
+
+    <LinearLayout
+        android:id="@+id/home_footer"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_alignParentBottom="true"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:layout_marginTop="@dimen/small_dp"
+        android:layout_marginStart="@dimen/medium_dp"
+        android:layout_marginEnd="@dimen/medium_dp"
+        android:baselineAligned="false">
+
+        <!-- HOME -->
+        <LinearLayout
+            android:id="@+id/block_home"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:gravity="center_horizontal"
+            android:layout_weight="1"
+            android:clickable="true"
+            android:focusable="true"
+            android:onClick="onClickHome">
+
+            <TextView
+                android:id="@+id/home_icon_view"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/home_icon_text"
+                android:textSize="18sp"
+                android:textColor="@color/colorPrimaryDark"/>
+            <TextView
+                android:id="@+id/home_view"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/home_text"
+                android:textSize="14sp"
+                android:textColor="@color/colorPrimaryDark"/>
+        </LinearLayout>
+
+        <!-- LIBRARY -->
+        <LinearLayout
+            android:id="@+id/block_library"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:gravity="center_horizontal"
+            android:layout_weight="1"
+            android:clickable="true"
+            android:focusable="true"
+            android:onClick="onClickLibrary">
+
+            <TextView
+                android:id="@+id/library_icon_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/library_icon_text"
+                android:textSize="18sp"
+                android:textColor="@color/colorPrimaryDark" />
+            <TextView
+                android:id="@+id/library_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/library_text"
+                android:textSize="14sp"
+                android:textColor="@color/colorPrimaryDark"/>
+        </LinearLayout>
+
+        <!-- STORE -->
+        <LinearLayout
+            android:id="@+id/block_store"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:gravity="center_horizontal"
+            android:layout_weight="1"
+            android:clickable="true"
+            android:focusable="true"
+            android:onClick="onClickStore">
+
+            <TextView
+                android:id="@+id/store_icon_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/store_icon_text"
+                android:textSize="18sp"
+                android:textColor="@color/colorPrimaryDark" />
+            <TextView
+                android:id="@+id/store_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/store_text"
+                android:textSize="14sp"
+                android:textColor="@color/colorPrimaryDark"/>
+        </LinearLayout>
+
+        <!-- MORE -->
+        <LinearLayout
+            android:id="@+id/block_more"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:gravity="center_horizontal"
+            android:layout_weight="1"
+            android:clickable="true"
+            android:focusable="true"
+            android:onClick="onClickMore">
+
+            <TextView
+                android:id="@+id/more_icon_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/more_icon_text"
+                android:textSize="18sp"
+                android:textColor="@color/colorPrimaryDark" />
+            <TextView
+                android:id="@+id/more_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/more_text"
+                android:textSize="14sp"
+                android:textColor="@color/colorPrimaryDark"/>
+        </LinearLayout>
+
+    </LinearLayout>
+
+</RelativeLayout>

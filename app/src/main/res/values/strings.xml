@@ -1,3 +1,15 @@
 <resources>
     <string name="app_name">13thReader</string>
+    <string name="search_text"> Search</string>
+    <string name="notification_text"></string>
+    <string name="home_icon_text"></string>
+    <string name="home_text">Home</string>
+    <string name="library_icon_text"></string>
+    <string name="library_text">Library</string>
+    <string name="store_text">Store</string>
+    <string name="store_icon_text"></string>
+    <string name="more_icon_text"></string>
+    <string name="more_text">More</string>
+    <string name="home_context_1">Welcome to Thirteenth Reader!</string>
+    <string name="home_context_2">You recent books appear here. To get start, browse recommended books below or browse the store.</string>
 </resources>
