@@ -11,5 +11,9 @@
     <string name="more_icon_text"></string>
     <string name="more_text">More</string>
     <string name="home_context_1">Welcome to Thirteenth Reader!</string>
-    <string name="home_context_2">You recent books appear here. To get start, browse recommended books below or browse the store.</string>
+    <string name="home_context_2">You recent books appear here. To get start, load local books in Library or browse the Store.</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
 </resources>

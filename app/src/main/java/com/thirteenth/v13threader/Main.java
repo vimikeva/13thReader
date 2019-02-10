@@ -8,13 +8,10 @@ import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 
-public class Home extends AppCompatActivity {
+public class Main extends AppCompatActivity {
 
     EditText homeSearch;
     TextView homeNotifications;
-
-    TextView homeContent1;
-    TextView homeContent2;
 
     TextView homeIconText;
     TextView homeText;
@@ -28,7 +25,7 @@ public class Home extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_home);
+        setContentView(R.layout.activity_main);
 
         linkedXMLJava();
         initialFontXml();
@@ -38,9 +35,6 @@ public class Home extends AppCompatActivity {
     private void linkedXMLJava () {
         homeSearch = findViewById(R.id.home_search);
         homeNotifications = findViewById(R.id.home_notification);
-
-        homeContent1 = findViewById(R.id.home_content_1);
-        homeContent2 = findViewById(R.id.home_content_2);
 
         homeIconText = findViewById(R.id.home_icon_view);
         homeText = findViewById(R.id.home_view);
@@ -62,15 +56,9 @@ public class Home extends AppCompatActivity {
                 "fonts/Font Awesome 5 Free-Solid.otf");
         Typeface segoeUISymbol = Typeface.createFromAsset(this.getAssets(),
                 "fonts/Segoe UI Symbol.ttf");
-        Typeface segoeUI = Typeface.createFromAsset(this.getAssets(),
-                "fonts/Segoe UI.ttf");
-
 
         homeSearch.setTypeface(awesome5BrandsRegular);
         homeNotifications.setTypeface(awesome5FreeRegular);
-
-        homeContent1.setTypeface(awesome5BrandsRegular);
-        homeContent2.setTypeface(segoeUI);
 
         homeIconText.setTypeface(awesome5FreeSolid);
         homeText.setTypeface(segoeUISymbol);

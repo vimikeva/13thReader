@@ -1,10 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Home"
     android:orientation="vertical" >
 
     <!-- HEADER -->
@@ -27,8 +25,7 @@
             android:textSize="18sp"
             android:layout_weight="2"
             android:inputType="text"
-            android:hint="@string/search_text"
-            tools:ignore="Autofill" />
+            android:hint="@string/search_text" />
 
         <TextView
             android:id="@+id/home_notification"
@@ -46,6 +43,7 @@
     </LinearLayout>
     
     <View
+        android:id="@+id/separator_top"
         android:layout_width="match_parent"
         android:layout_height="1dp"
         android:layout_below="@id/home_header"
@@ -53,38 +51,19 @@
 
 
     <!-- Content Block -->
-    <LinearLayout
-        android:id="@+id/home_content"
+    <fragment
+        android:id="@+id/content_block"
+        android:name="com.thirteenth.v13threader.HomeDefault"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="vertical"
-        android:gravity="center"
-        android:layout_centerInParent="true">
+        android:layout_height="match_parent"
+        android:layout_below="@id/separator_top"
+        android:layout_above="@id/separator_bottom"/>
 
-        <TextView
-            android:id="@+id/home_content_1"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/home_context_1"
-            android:textAllCaps="false"
-            android:textColor="@color/colorBlack"
-            android:textSize="18sp" />
-        <TextView
-            android:id="@+id/home_content_2"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:textAlignment="center"
-            android:layout_marginStart="48dp"
-            android:layout_marginEnd="48dp"
-            android:text="@string/home_context_2"
-            android:textSize="16sp"
-            android:textColor="@color/colorBlack"/>
-    </LinearLayout>
-    
 
     <!-- FOOTER -->
 
     <View
+        android:id="@+id/separator_bottom"
         android:layout_width="match_parent"
         android:layout_height="1dp"
         android:layout_above="@id/home_footer"
